@@ -2,13 +2,14 @@ const {series, watch, src, dest, parallel} = require('gulp');
 //const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const pump = require('pump');
+const terser = require('gulp-terser');
 
 // gulp plugins and utils
 var livereload = require('gulp-livereload');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var zip = require('gulp-zip');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-terser');
 var beeper = require('beeper');
 
 // postcss plugins

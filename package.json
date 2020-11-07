@@ -1,8 +1,8 @@
 {
-    "name": "aesto",
-    "description": "Minimalist blog & magazine theme for ghost",
-    "demo": "https://aesto.inoryum.com",
-    "version": "1.1.5",
+    "name": "luroio-theme",
+    "description": "Minimalist blog & magazine theme for Luro",
+    "demo": "https://www.luro.io",
+    "version": "1.1.0",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
@@ -16,9 +16,9 @@
         "preship": "yarn test"
     },
     "author": {
-        "name": "Inoryum Themes",
-        "email": "hello@inoryum.com",
-        "url": "https://inoryum.com"
+        "name": "lucas-zuege",
+        "email": "lucas@luro.io",
+        "url": "https://www.luro.io"
     },
     "gpm": {
         "type": "theme",

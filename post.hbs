@@ -71,11 +71,11 @@
             </div>
             {{> "social-share"}} {{!-- partials/social-share.hbs --}}
         </div>
-        {{#if access}}      
+        <!--{{#if access}}
             <section class="it-post-comments">
                 {{> "disqus"}} {{!-- partials/disqus.hbs --}}
             </section>
-        {{/if}}
+        {{/if}}-->
     </footer>
 
 </article>
@@ -87,7 +87,7 @@
                 <a href="{{url}}">
                     <div class="it-readmore-media">
                         {{#if feature_image}}
-                        <img src="{{feature_image}}" alt="{{title}}">
+                        <img class="lazy" alt="{{title}}" data-src="{{img_url feature_image size="s"}}">
                         {{/if}}
                     </div>
                     <div class="it-readmore-content">
@@ -104,13 +104,13 @@
                 <a href="{{url}}">
                     <div class="it-readmore-content">
                         <div class="it-arrow-wrapper">
-                            {{t "Previous Post"}} {{> "icons/arrow-right"}} 
+                            {{t "Previous Post"}} {{> "icons/arrow-right"}}
                         </div>
-                        <h4>{{title}}</h4> 
+                        <h4>{{title}}</h4>
                     </div>
                     <div class="it-readmore-media">
                         {{#if feature_image}}
-                        <img src="{{feature_image}}" alt="{{title}}">
+                        <img class="lazy" alt="{{title}}" data-src="{{img_url feature_image size="s"}}">
                         {{/if}}
                     </div>
                 </a>
@@ -120,3 +120,5 @@
 </aside>
 
 {{/post}}
+
+<script src="{{asset "extra/caption.js"}}"></script>

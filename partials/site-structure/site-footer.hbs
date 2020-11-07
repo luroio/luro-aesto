@@ -16,7 +16,7 @@
                 {{/if}}
             </div>
             <div class="it-foot-menu">
-                <h4>{{t "Links"}}</h4>
+                <h4>{{t "Topics"}}</h4>
                 {{#if @site.secondary_navigation}}
                     {{navigation type="secondary"}}
                {{else}}
@@ -24,39 +24,27 @@
                {{/if}}
             </div>
             <div class="it-foot-tag">
-                <h4>{{t "Tags"}}</h4>
-                {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                <h4>{{t "Popular Tags"}}</h4>
+                {{#get 'tags' limit='10' include='count.posts' order='count.posts desc'}}
                     {{#foreach tags}}
         				<a href="{{url}}" title="{{title}}">{{name}}</a>
         			{{/foreach}}
     			{{/get}}
             </div>
-            
-            
+
+
             <div class="it-subscribe-section">
-                {{#if @labs.members}}
-                	<h4>{{t "Subscribe"}}</h4>
-                	<p>{{t "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox"}}</p>
-                	<div class="it-subscribe-content">
-                		<form data-members-form="subscribe" class="subscribe-form">
-                			<div class="input-wrapper">
-                				<input type="email" class="subscribe-form-input" placeholder="{{t "Email"}}" aria-label="{{t "Email"}}" data-members-email="">
-                				<button type="submit" class="subscribe-form-button">{{t "Subscribe"}}</button>
-                			</div>
-                			<div class="message-success">{{t "Please check your inbox and click the link to confirm your subscription."}}</div>
-                			<div class="message-error">{{t "An error occurred, please try again later."}}</div>
-                		</form>
-                	</div>
-                {{/if}}
+                	<h4>{{t "Subscribe to our Telegram Channel!"}}</h4>
+                	<p>{{t "Stay up to date! Get all the latest & greatest post straight to your Telegram!"}}</p>
+                  <center><button class="it-button it-button-primary">
+                    <a href="https://t.me/luroio">Subscribe!</a>
+                  </button></center>
             </div>
-            
+
             <div class="it-foot-meta">
-                &copy; {{date format="YYYY"}} {{@site.title}} {{{t "Published with {ghostlink}" ghostlink="<a href=\"https://ghost.org\">Ghost</a>"}}} {{t "&"}} <a href="https://github.com/Inoryum-Ltd/aesto" target="_blank" title="aEsto">aEsto</a>
+                &copy; {{date format="YYYY"}} {{@site.title}}
             </div>
             <div class="it-foot-social">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="{{t "Facebook"}}" target="_blank" rel="noopener" aria-label="{{t "Facebook"}}">{{> "icons/facebook"}}</a>
-                {{/if}}
                 {{#if @site.twitter}}
                 <a href="{{twitter_url @site.twitter}}" title="{{t "Twitter"}}" target="_blank" rel="noopener" aria-label="{{t "Twitter"}}">{{> "icons/twitter"}}</a>
                 {{/if}}
@@ -65,3 +53,4 @@
         </div>
     </div>
 </footer>
+
